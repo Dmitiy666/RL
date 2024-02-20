@@ -22,7 +22,7 @@ import torch.nn as nn
 import torch.optim as optim
 
 EXPERIMENT_NAME = "-cartpole_hidden_state_64"  # or -cartpole_net_architecture_v1
-HIDDEN_SIZE = 64
+HIDDEN_SIZE = 640
 BATCH_SIZE = 16
 PERCENTILE = 70
 
@@ -95,7 +95,7 @@ def filter_batch(batch, percentile):
     train_act_v = torch.LongTensor(train_act)
     return train_obs_v, train_act_v, reward_bound, reward_mean
 
-
+los = []
 if __name__ == "__main__":
     env = gym.make("CartPole-v1")
     obs_size = env.observation_space.shape[0]
@@ -123,3 +123,5 @@ if __name__ == "__main__":
             print("Solved!")
             break
     writer.close()
+
+print(los)
