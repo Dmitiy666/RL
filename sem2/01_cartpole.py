@@ -22,13 +22,16 @@ import torch.nn as nn
 import torch.optim as optim
 
 EXPERIMENT_NAME = "-cartpole_hidden_state_32"  # or -cartpole_net_architecture_v1
-HIDDEN_SIZE = 32
+HIDDEN_SIZE = 64
 BATCH_SIZE = 16
 PERCENTILE = 70
 
 Episode = namedtuple('Episode', field_names=['reward', 'steps'])
 EpisodeStep = namedtuple('EpisodeStep', field_names=['observation', 'action'])
 
+nn.Linear(64, 64),
+nn.ReLU(),
+nn.Linear(64, 8)
 
 class Net(nn.Module):
     def __init__(self, obs_size, hidden_size, n_actions):
