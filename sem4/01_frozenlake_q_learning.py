@@ -14,7 +14,7 @@ from tensorboardX import SummaryWriter
 
 ENV_NAME = "FrozenLake-v1"
 GAMMA = 0.9
-ALPHA = 0.2
+ALPHA = 0.5
 TEST_EPISODES = 20
 EXPERIMENT_NAME = "-q-learning-determined"
 
