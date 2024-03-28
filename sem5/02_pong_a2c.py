@@ -96,6 +96,7 @@ def unpack_batch(batch, net, device='cpu'):
         np.array(states, copy=False)).to(device)
     actions_t = torch.LongTensor(actions).to(device)
 
+
     # handle rewards
     rewards_np = np.array(rewards, dtype=np.float32)
     if not_done_idx:
