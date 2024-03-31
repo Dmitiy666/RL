@@ -20,7 +20,7 @@ import torch.optim as optim
 
 GAMMA = 0.99
 LEARNING_RATE = 0.01
-EPISODES_TO_TRAIN = 4
+EPISODES_TO_TRAIN = 8
 
 
 class PGN(nn.Module):
