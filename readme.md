@@ -1,2 +1,1 @@
-Семинар №1 
-Знакомство с предметом, средой и базовыми понятиями 
+Some code of Reinforcement Learning
